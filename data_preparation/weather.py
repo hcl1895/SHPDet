@@ -7,10 +7,6 @@ import numpy as np
 
 
 def image_seed(split, image_id, seed=20261118):
-    examples = {'2007_004810': 20261118, '2007_002024': 20261119,
-                '2007_005273': 20261120, '2007_000364': 20261121}
-    if seed == 20261118 and image_id in examples:
-        return examples[image_id]
     key = f'SHPDet-{seed}/{split}/{image_id}'
     return int.from_bytes(hashlib.sha256(key.encode()).digest()[:4], 'big')
 
