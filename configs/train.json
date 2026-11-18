@@ -1,0 +1,21 @@
+{
+  "train_manifest": "data/weather/train/manifest.jsonl",
+  "val_manifest": null,
+  "train_descriptions": "data/descriptions/train.jsonl",
+  "val_descriptions": null,
+  "output": "runs/shpdet",
+  "phi": "s",
+  "use_prompt_fusion": true,
+  "input_size": 640,
+  "epochs": 100,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "momentum": 0.937,
+  "weight_decay": 0.0005,
+  "workers": 4,
+  "seed": 42,
+  "loss": {
+    "detection": 0.2,
+    "ppc": 0.05
+  }
+}
